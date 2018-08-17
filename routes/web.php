@@ -15,3 +15,11 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('profiles','Usercontroller@index')->name('profiles.index');
+    Route::resource('profile','Usercontroller')->except('index');
+
+
+});

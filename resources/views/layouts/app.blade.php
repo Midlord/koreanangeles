@@ -12,7 +12,7 @@
 </head>
 <body>
     @include('partials.top-nav')
-    @include('modals.login')
+    {{-- @include('modals.login') --}}
 
         <main class="py-4">
             <div class="container wrapper">
