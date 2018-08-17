@@ -28,7 +28,7 @@ class RestaurantController extends Controller
 
     public function create()
     {
-        $users = User::where('role','owner')->get();
+        $users = User::where('type','owner')->get();
         
         return view ('admin.restaurants.create',compact('users'));
     }
