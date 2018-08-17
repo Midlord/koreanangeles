@@ -15,7 +15,7 @@ class RedirectIfNotAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->user()->role != 'admin'){
+        if(auth()->user()->type != 'admin'){
             return redirect(route('login'));
         }
         return $next($request);

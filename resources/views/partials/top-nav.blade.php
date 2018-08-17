@@ -22,8 +22,11 @@
                     <i class="fa fa-user"></i> Profile </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
                 <a class="dropdown-item" href="profile/{{Auth::user()->id}}">My account</a>
-                    <a class="dropdown-item" href="#">Log out</a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item">Log out</a>
                 </div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
             </li>
             @else
             <li class="nav-item">
