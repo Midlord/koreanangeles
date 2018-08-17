@@ -13,7 +13,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome, 
-                  <br>{{ $user->fullName }}
+                  {{-- <br>{{ $user->fullName }} --}}
                 <h2></h2>
               </div>
               <div class="clearfix"></div>
