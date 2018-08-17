@@ -23,6 +23,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('opening');
             $table->string('closing');
             $table->text('image');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
