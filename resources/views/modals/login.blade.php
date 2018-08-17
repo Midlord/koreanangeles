@@ -28,14 +28,24 @@
                                 @csrf
                             <div class="md-form form-sm mb-5">
                                 <i class="fa fa-envelope prefix"></i>
-                                <input type="email" id="modalLRInput10" name="email" class="form-control form-control-sm validate">
-                                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+                                <input type="email" id="modalLRInput10" name="identity" class="form-control form-control-sm" value="{{ old('identity') }}">
+                                <label data-error="wrong" data-success="right" for="modalLRInput10">Username or Email</label>
+                                @if ($errors->has('identity'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('identity') }}</strong>
+                                </span>
+                                @endif
                             </div>
 
                             <div class="md-form form-sm mb-4">
                                 <i class="fa fa-lock prefix"></i>
-                                <input type="password" id="modalLRInput11" name="password" class="form-control form-control-sm validate">
+                                <input type="password" id="modalLRInput11" name="password" class="form-control form-control-sm">
                                 <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+                                @if ($errors->has('password'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+                                @endif
                             </div>
                             <div class="text-center mt-2">
                                 <button class="btn btn-info" type="submit">Log in <i class="fa fa-sign-in ml-1"></i></button>
@@ -62,19 +72,43 @@
                                     @csrf
                             <div class="md-form form-sm mb-5">
                                 <i class="fa fa-envelope prefix"></i>
-                                <input type="email" id="modalLRInput12" name="email" class="form-control form-control-sm validate">
-                                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+                                <input type="text" id="modalLRInput12" name="firstName" class="form-control form-control-sm validate">
+                                <label for="modalLRInput12">First Name</label>
                             </div>
-
+                            <div class="md-form form-sm mb-5">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" id="modalLRInput12" name="middleName" class="form-control form-control-sm">
+                                <label for="modalLRInput12">Middle Name</label>
+                            </div>
+                            <div class="md-form form-sm mb-5">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" id="modalLRInput12" name="lastName" class="form-control form-control-sm">
+                                <label for="modalLRInput12">Last Name</label>
+                            </div>
+                            <div class="md-form form-sm mb-5">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="email" id="modalLRInput12" name="email" class="form-control form-control-sm">
+                                <label for="modalLRInput12">Your email</label>
+                            </div>
+                            <div class="md-form form-sm mb-5">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" id="modalLRInput12" name="username" class="form-control form-control-sm">
+                                <label for="modalLRInput12">Username</label>
+                            </div>
+                            <div class="md-form form-sm mb-5">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="number" id="modalLRInput12" name="phone" class="form-control form-control-sm">
+                                <label for="modalLRInput12">Phone#</label>
+                            </div>
                             <div class="md-form form-sm mb-5">
                                 <i class="fa fa-lock prefix"></i>
-                                <input type="password" id="modalLRInput13" name="password" class="form-control form-control-sm validate">
-                                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+                                <input type="password" id="modalLRInput13" name="password" class="form-control form-control-sm">
+                                <label for="modalLRInput13">Your password</label>
                             </div>
 
                             <div class="md-form form-sm mb-4">
                                 <i class="fa fa-lock prefix"></i>
-                                <input type="password" id="modalLRInput14" name="password_confirmation" class="form-control form-control-sm validate">
+                                <input type="password" id="modalLRInput14" name="password_confirmation" class="form-control form-control-sm">
                                 <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
                             </div>
 
